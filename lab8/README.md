@@ -98,6 +98,20 @@ and make ASP.NetCore MVC webApp implement all CRUD operation using this DB.
     @RenderSection("Scripts", required:false)
     ```
 
+Snapshots:
+
+![1](https://user-images.githubusercontent.com/61587804/226497076-8e2db3d5-2119-43ed-ab54-f806dcc9d102.png)
+
+![2](https://user-images.githubusercontent.com/61587804/226497079-b313501f-7fd8-4fcd-a066-1d24a4d2b33e.png)
+
+![3](https://user-images.githubusercontent.com/61587804/226497082-36c521f3-758e-463b-aec7-8d13e92428d9.png)
+
+![4](https://user-images.githubusercontent.com/61587804/226497085-575d682e-1731-4241-b354-3b880b0796b0.png)
+
+![5](https://user-images.githubusercontent.com/61587804/226497089-68e33494-7384-4e28-aec2-8c398be6e802.png)
+
+
+
 <hr>
 <hr>
 
@@ -219,3 +233,23 @@ endpoints.MapControllerRoute
                     pattern: "{Controller=Home}/{Action=Index}"
                 );
 ```
+
+Snapshots:
+
+![1](https://user-images.githubusercontent.com/61587804/226497172-061e56db-b578-4505-81ec-46767bcd2ae0.png)
+
+![2](https://user-images.githubusercontent.com/61587804/226497174-39b3b5da-e90c-45f2-8d0d-089f45766e70.png)
+
+![3](https://user-images.githubusercontent.com/61587804/226497177-2350337b-64db-439c-bce3-17a3c38a7a75.png)
+
+![4](https://user-images.githubusercontent.com/61587804/226497180-8193badb-754b-41a1-a4c3-c68af76cf873.png)
+
+![5](https://user-images.githubusercontent.com/61587804/226497166-5aac5226-6f89-4d06-a0eb-cd06352216c2.png)
+
+![6](https://user-images.githubusercontent.com/61587804/226497167-624ecc67-e886-4232-af33-c0e9a9cc95a2.png)
+
+![7](https://user-images.githubusercontent.com/61587804/226497168-cc4d5316-1aee-4417-a803-b9b794d1cd7b.png)
+
+![8](https://user-images.githubusercontent.com/61587804/226497170-a264fc6d-9bc6-447f-b464-1c1e087f8a43.png)
+
+![9](https://user-images.githubusercontent.com/61587804/226497171-f79e69ad-c8c3-489d-b4d7-426551490e0f.png)
