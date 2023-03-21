@@ -1,0 +1,10 @@
+﻿@model HandleErrorInfo
+@{
+    ViewBag.Title = "customError_1";
+}
+
+<h2>customError_1</h2>
+
+<h3 style="color:red">**************Custom error 1******************</h3>
+<h3>Error message: @Model.Exception.Message</h3>
+<h3>Controller: @Model.ControllerName</h3>

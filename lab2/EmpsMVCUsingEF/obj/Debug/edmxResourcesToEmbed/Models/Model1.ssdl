@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EMPLOYEESModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Depts">
+    <Key>
+      <PropertyRef Name="DeptID" />
+    </Key>
+    <Property Name="DeptID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeptDesc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Emps">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="EmpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpFname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpLname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpSalary" Type="float" />
+    <Property Name="EmpHDate" Type="smalldatetime" />
+    <Property Name="dID" Type="int" Nullable="false" />
+    <Property Name="CtyID" Type="int" />
+  </EntityType>
+  <Association Name="FK_Emps_Depts">
+    <End Role="Depts" Type="Self.Depts" Multiplicity="1" />
+    <End Role="Emps" Type="Self.Emps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Depts">
+        <PropertyRef Name="DeptID" />
+      </Principal>
+      <Dependent Role="Emps">
+        <PropertyRef Name="dID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EMPLOYEESModelStoreContainer">
+    <EntitySet Name="Depts" EntityType="Self.Depts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Emps" EntityType="Self.Emps" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Emps_Depts" Association="Self.FK_Emps_Depts">
+      <End Role="Depts" EntitySet="Depts" />
+      <End Role="Emps" EntitySet="Emps" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

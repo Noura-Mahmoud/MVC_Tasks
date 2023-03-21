@@ -1,0 +1,38 @@
+﻿@using webGridHelper
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    @{
+        List<Empolyee> employees = new List<Empolyee>()
+{
+            new Empolyee (){ Age = 23, Name="Hamada", Salary = 6000 },
+            new Empolyee (){ Age = 25, Name="Nosa", Salary = 6500 },
+            new Empolyee (){ Age = 40, Name="Pop", Salary = 8000 },
+            new Empolyee (){ Age = 37, Name="Alfrid", Salary = 5700 },
+            new Empolyee (){ Age = 43, Name="Lucy", Salary = 6000 }
+        };
+    }
+    @*@{WebGrid grid = new WebGrid(employees);}
+    @grid.GetHtml()*@
+    <!-- #region Chart Helper -->
+    @*<div>
+            @{
+                var myChart = new Chart(200, 200).AddTitle("Temperatures").AddSeries(name: "temp", xValue: new[] {"1", "2", "3", "4", "5", "6", "7", "8"}, yValues:new[] { "18", "26", "30", "20", "38", "22", "36", "41" }).Write();
+            }
+        </div>*@
+
+    <!-- #endregion -->
+    <!-- #region Json Helper -->
+    @{ 
+        var myObj = new { Name = "Noura", Age = 24 };
+        var myJson = Json.Encode(myObj);
+        <div>@myJson</div>
+    }
+    <!-- #endregion -->
+
+        
+</body>
+</html>

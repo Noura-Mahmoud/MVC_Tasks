@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form method="post">
+        Name: <input type="text" name="name" value="" /><br /><br />
+        BirthDay: <input type="date" name="birthday" value="" /><br /><br />
+        <input type="submit" value="Go"/>
+        <input type="checkbox" name="graduate"/> IsGraduated<br /><br /><br /><br />
+    </form>
+    @{
+        if (IsPost)
+        {
+        <div>
+            <div style="color:red">Hello @Request["name"] </div><br />
+            <div style="color:blue">your Birthday is: @Request["birthday"] </div><br />
+            @{ 
+                if (Request["graduate"] == "on")
+                {
+                    <div>YESSSSSS, AM Graduated</div><br />
+                }
+                else { <div>No, not graduated yet</div><br />}
+            }
+        </div>
+        }
+    }
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@using EmpsMVCUsingEF.Models;
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@{Emp emp = @ViewBag.emp;}
+
+<label>Name: </label>
+<label>@emp.EmpFname @emp.EmpLname</label>
+<br />
+<label>Salary: </label>
+<label>@emp.EmpSalary</label>
+<br />
+<label>Department: </label>
+<label>@emp.Dept.DeptName</label>
+<br />
+<br />

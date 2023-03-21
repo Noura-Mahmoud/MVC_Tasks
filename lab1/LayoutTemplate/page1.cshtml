@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div style="display:flex">
+        <div style="display: inline-flex; width: 50%; height: 700px">
+            <form method="post">
+                <div>Choose a background image:</div>
+                <select name="background">
+                    <option value="backgrounds/0.jpg">0</option>
+                    <option value="backgrounds/1.jpg">1</option>
+                    <option value="backgrounds/2.jpg">2</option>
+                    <option value="backgrounds/3.jpg">3</option>
+                    <option value="backgrounds/4.jpg">4</option>
+                    <option value="backgrounds/5.jpg">5</option>
+                    <option value="backgrounds/6.jpg">6</option>
+                    <option value="backgrounds/7.jpg">7</option>
+                    <option value="backgrounds/8.jpg">8</option>
+                    <option value="backgrounds/9.jpg">9</option>
+                    <option value="backgrounds/10.jpg">10</option>
+                    <option value="backgrounds/11.jpg">11</option>
+                </select>
+                <br />
+                <br />
+                <div>Choose font color:</div>
+                <select name="fontColor">
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+                <br />
+                <br />
+                <hr />
+                <div>Choose greeting Type:</div>
+                <input type="radio" name="greetingType" value="images/bd2.jpg" />
+                <label>Birthday</label>
+                <br />
+                <input type="radio" name="greetingType" value="images/well.gif" />
+                <label>Get Well Soon</label>
+                <br />
+                <input type="radio" name="greetingType" value="images/val.bmp" />
+                <label>Valentine</label>
+                <br />
+                <input type="radio" name="greetingType" value="images/congrats2.gif" />
+                <label>Congrats</label>
+                <br />
+                <br />
+
+                <input type="checkbox" name="addImage" />
+                <label>Add the Picture</label>
+                <br />
+                <label>Enter the greeting Message below: </label>
+                <br />
+                <input type="text" name="message" />
+                <br />
+                <br />
+                <input type="submit" value="Preview" />
+
+            </form>
+        </div>
+        <div style="display: inline-flex; width: 50%; height: 100% ">
+            @{
+                if (IsPost)
+                {
+                    <div style="background-image:url(@Request["background"]); width:100%; height: 700px; display:flex;flex-direction:column; justify-content:center; align-items:center">
+                        @{
+                            if (Request["addImage"] == "on")
+                            {
+                                <div style="width: 100%; display:flex; justify-content: center; align-items: center">
+
+                                    <img src=@Request["greetingType"] alt="greetingType" style="display:block" /><br /><br />
+                                </div>
+                            }
+                        }
+                        <br /><br />
+                        <div style="color:@Request["fontColor"]; text-align:center; font-size:30px"> @Request["message"] </div>
+                    </div>
+
+                }
+            }
+        </div>
+
+    </div>
+</body>
+</html>

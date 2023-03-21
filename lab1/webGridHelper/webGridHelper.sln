@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webGridHelper", "webGridHelper.csproj", "{E0FE6781-1B82-4355-9B12-BF89F7E161A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0FE6781-1B82-4355-9B12-BF89F7E161A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0FE6781-1B82-4355-9B12-BF89F7E161A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0FE6781-1B82-4355-9B12-BF89F7E161A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0FE6781-1B82-4355-9B12-BF89F7E161A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8381D72-9ADD-4812-80DB-E0DA9A0EA716}
+	EndGlobalSection
+EndGlobal

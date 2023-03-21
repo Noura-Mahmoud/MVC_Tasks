@@ -1,0 +1,20 @@
+﻿@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment envInject
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2> Environment Name: @envInject.EnvironmentName </h2>
+<div>
+        <environment include="Development">
+            You are in a Development environment
+        </environment>
+        <environment exclude="Development">
+            Watch out: This is not a Development environment
+        </environment>
+        <partial name="_PartialView"></partial>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

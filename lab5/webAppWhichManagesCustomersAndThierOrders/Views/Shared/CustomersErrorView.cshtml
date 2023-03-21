@@ -1,0 +1,13 @@
+﻿@model HandleErrorInfo
+@{
+    ViewBag.Title = "CustomersErrorView";
+}
+
+<h2 style="color:red">Customers Error </h2>
+
+<h3>
+    Error message:  @Model.Exception.Message
+</h3>
+
+<h3> Controllerr: @Model.ControllerName, Action: @Model.ActionName </h3>
+
