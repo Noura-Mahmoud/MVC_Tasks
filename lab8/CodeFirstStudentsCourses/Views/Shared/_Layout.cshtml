@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    @Html.ActionLink("Code first", "Index", "Home")
+    @Html.ActionLink("Students", "Index", "Students", new { area = "" }, new { @class = "btn btn-outline-primary"  })
+    @Html.ActionLink("Courses", "Index", "Courses", new { area = "" }, new { @class = "btn btn-outline-primary"  })
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("Code first", "Index", "Home")
+                @Html.ActionLink("Students", "Index", "Students", new { area = "" }, new { @class = "btn btn-outline-primary"  })
+                @Html.ActionLink("Courses", "Index", "Courses", new { area = "" }, new { @class = "btn btn-outline-primary"  })
+            </div>
+            
+        </div>
+
+        <div>
+    </div>*@
+        @RenderBody()
+</body>
+@RenderSection("Scripts", required:false)
+
+</html>
